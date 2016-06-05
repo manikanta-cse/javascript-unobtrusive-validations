@@ -1,0 +1,27 @@
+{
+  "name": "javascript-unobtrusive-validation-demo",
+  "version": "0.0.1",
+  "description": "Demo",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/manikanta-cse/javascript-unobtrusive-validations.git"
+  },
+  "keywords": [
+    "js",
+    "unobtrusive",
+    "validation"
+  ],
+  "author": "Manikanta Kattamuri",
+  "license": "NA",
+  "bugs": {
+    "url": "https://github.com/manikanta-cse/javascript-unobtrusive-validations/issues"
+  },
+  "homepage": "https://github.com/manikanta-cse/javascript-unobtrusive-validations",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}

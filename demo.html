@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
+
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/mvc/5.2.3/jquery.validate.unobtrusive.min.js"></script>
+<script src="constants.js"></script>
+
+    <style>
+.field-validation-error{
+
+    color: red;
+}
+
+    </style>
+</head>
+<body>
+
+<form>
+
+    <span id="javascript: constants.uname-required"></span>
+    <input type="text" id="name" name="name" data-val="true" data-val-required="Please Enter Username" minlength="2" maxlength="4" data-val-regex-pattern="$[a-zA-Z]" data-val-regex="Only alphabets allowed" />
+    <span data-valmsg-for="name" data-valmsg-replace="false"></span>
+
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
