@@ -1,6 +1,5 @@
 node_modules
 bower_components
-reports
 *.log
 .DS_Store
 .DS_Store?
