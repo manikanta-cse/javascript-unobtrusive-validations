@@ -14,6 +14,12 @@ app.get( '/', function( req, res ) {
   
 });
 
+app.get( '/isUserIdExists', function( req, res ) {
+  var status = req.query.userid == "foo" ? false : true;
+  res.send(status);   
+  
+});
+
 var server = app.listen( 8000, function() {
   console.log( 'server started. listening to 8000' );
 })

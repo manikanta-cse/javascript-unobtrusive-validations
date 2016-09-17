@@ -7,7 +7,7 @@
     <script src="bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
     <script src="bower_components/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    
+        
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="./style.css">
    </head>
@@ -16,16 +16,75 @@
 <form>
 
 <div class="container">
-
+<input type="hidden" id="id" name="id" value="1"/>  ></div>
 <div class="row">
- <!--<label for="name" class="col-md-3 form-control-label">Name</label>-->
- <div class="col-md-3">Name </div>
- <div class="col-md-5"> <input type="text" id="name" name="name" class="col-md-6 form-control" data-val="true" data-val-required="Please Enter Username" minlength="2" maxlength="4" data-val-regex-pattern="$[a-zA-Z]" data-val-regex="Only alphabets allowed" /> </div>
+ <div class="col-md-3"><label  for="name">Name:</label> </div>
+ <div class="col-md-5"> 
+ <input type="text" id="name" name="name" class="col-md-6 form-control" data-val="true" data-val-required="Name cannot be empty" data-val-regex-pattern="^[a-zA-Z ]*$"  data-val-regex="Only characters allowed" /> 
+ </div>
   <div class="col-md-4"  data-valmsg-for="name" data-valmsg-replace="true" ></div>
 </div>
+<br/>
+<div class="row">
+ <div class="col-md-3"> <label for="email">Email:</label> </div>
+ <div class="col-md-5">          
+ <input type="text" class="col-md-6 form-control" id="email" name="email"  data-val="true" data-val-required="Email cannot be empty" data-val-regex="Please enter a valid email" data-val-regex-pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" /> 
+ </div>
+  <div class="col-md-4"  data-valmsg-for="email" data-valmsg-replace="true" ></div>
+</div>
+
+<br/>
+<div class="row">
+    <div class="col-md-3"> <label for="pwd">Password:</label> </div>
+    <div class="col-md-5"> 
+    <input type="password" class="col-md-6 form-control" id="pwd" name="pwd"  data-val="true" data-val-required="Password cannot be empty"  maxlength="10" minlength="6"  />
+    </div>
+    <div class="col-md-4"  data-valmsg-for="pwd" data-valmsg-replace="true" ></div>
+</div>
+<br/>
+<div class="row">
+    <div class="col-md-3"> <label for="cpwd">Confirm Password:</label> </div>
+    <div class="col-md-5"> 
+    <input type="password" class="col-md-6 form-control" id="cpwd" name="cpwd"  data-val="true" data-val-required="Confirm Password cannot be empty"  maxlength="10" minlength="6"  data-val-equalto="Password doesn't match!" data-val-equalto-other="*.pwd" />
+    </div>
+    <div class="col-md-4"  data-valmsg-for="cpwd" data-valmsg-replace="true" ></div>
+</div>
+
+<br/>
+<div class="row">
+    <div class="col-md-3"> <label for="userid">User Id:</label> </div>
+    <div class="col-md-5"> 
+    <input type="text" class="col-md-6 form-control" id="userid" name="userid"  data-val="true" data-val-required="User ID cannot be empty" data-val-regex="Special characters are not allowed" data-val-regex-pattern="^[^/\\~@#$%^*\&lt;>`=+|]*$" maxlength="10" data-val-remote-url="/isUserIdExists/" data-val-remote-additionalfields="*.id,*.userid" data-val-remote="User with this id already registered"/>
+    </div>
+    <div class="col-md-4"  data-valmsg-for="userid" data-valmsg-replace="true" ></div>
+</div>
+<br/>
 
 <div class="row">
-<input type="submit" value="Submit" class="btn btn-success">
+     <div class="col-md-3"> <label for="phone">Phone:</label> </div> 
+      <div class="col-md-5"> 
+       <input type="text" class="col-md-6 form-control" id="phone" name="phone"  data-val="true" data-val-required="Phone Number cannot be empty" data-val-number="Phone Number must be number"  data-val-regex="Phone Number must be a 10 digit" data-val-regex-pattern="^[0-9]{10}$" />
+      </div>
+       <div class="col-md-4"  data-valmsg-for="phone" data-valmsg-replace="true" ></div>
+</div>
+<br/>
+<div class="row">
+<div class="col-md-3"> <label for="country">Country:</label> </div> 
+<div class="col-md-5"> 
+<select id="country" class="form-control" name="country" data-val="true"  data-val-required="Country cannot be empty" >
+  <option value="">Select</option>
+  <option>India</option>
+  <option>USA</option>                         
+ </select>
+</div>
+<div class="col-md-4"  data-valmsg-for="country" data-valmsg-replace="true" ></div>    
+</div>
+
+<br/>
+<div class="row">
+
+<div class="col-md-3" ></div>
+<div class="col-md-4"><input type="submit" value="Submit" class="btn btn-success"></div>
 
 </div>
 
