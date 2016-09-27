@@ -7,7 +7,7 @@
     "express": "^4.14.0"
   },
   "devDependencies": {
-    "express": "^4.14.0"
+    
   },
   "scripts": {
     "test": "node server.js"
