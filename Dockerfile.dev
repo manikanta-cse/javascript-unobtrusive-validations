@@ -1,1 +1,17 @@
+
 FROM node
+
+MAINTAINER  Manikanta Kattamuri
+
+ENV NODE_ENV=Dev
+ENV PORT=8000
+
+COPY . /var/www
+
+WORKDIR /var/www
+
+VOLUME ["/var/www"]
+
+EXPOSE $PORT
+
+ENTRYPOINT ["npm","start"]
