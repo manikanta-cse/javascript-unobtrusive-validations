@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Demo</title>
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
-    <script src="bower_components/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script  type="text/javascript" src="node_modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+    <script  type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
         
-    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="./style.css">
    </head>
 <body>
@@ -90,6 +90,11 @@
 
 </div>
 
+<div>
+To hookup via docker run this belwo command
+docker run -p 8000:8000 -v $(pwd):/var/www -w "/var/www" node npm start
+
+</div>
 </form>
 </body>
 </html>
